@@ -1,4 +1,4 @@
-import logo from './logo.png'
+import logo from '../assets/logo.png'
 function Footer() {
     return (
       <footer className="bg-green-500 p-4 fixed bottom-0 w-full flex items-center justify-center">

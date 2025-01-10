@@ -1,4 +1,4 @@
-import account from './account.png';
+import account from '../assets/account.png';
 function AccountButton() {
     return (
         <div className="flex items-center space-x-4">
