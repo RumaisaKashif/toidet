@@ -22,9 +22,9 @@ function ToiletList() {
   }, []);
 
   const filteredToilets = toilets.filter((toilet) => {
-    const lowerCaseSearch = searchInput.toLowerCase();
-    if ((searchInput && !toilet.name.toLowerCase().includes(lowerCaseSearch)) ||
-        (searchInput && !toilet.location.toLowerCase().includes(lowerCaseSearch))) {
+    // const lowerCaseSearch = searchInput.toLowerCase();
+    if ((searchInput && !toilet.name.toLowerCase().includes(searchInput.toLowerCase())) &&
+        (searchInput && !toilet.location.toLowerCase().includes(searchInput.toLowerCase()))) {
       return false;
     }
     if (selectedOptions.unisex && toilet.gender !== 'unisex') return false;
