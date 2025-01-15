@@ -1,8 +1,5 @@
-# React + Vite
+# Toidet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### A web application that makes toilet hunting at NUS easier, particularly for those seeking bidets. 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+With a frontend built using Vite with React and integrating Tailwind for CSS, the toidet app functions by fetching data from firebase and has been deployed using firebase hosting. An interactive UI enables users to filter out toilets based on gender preferences and bidet availability. Users can search toilets by location and bookmark their preferred toilet locations. 
