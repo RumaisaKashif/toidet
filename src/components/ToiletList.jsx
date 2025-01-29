@@ -23,8 +23,8 @@ function ToiletList() {
 
   const filteredToilets = toilets.filter((toilet) => {
     // const lowerCaseSearch = searchInput.toLowerCase();
-    if ((searchInput && !toilet.name.toLowerCase().includes(searchInput.toLowerCase())) &&
-        (searchInput && !toilet.location.toLowerCase().includes(searchInput.toLowerCase()))) {
+    if ((searchInput && !toilet.location.toLowerCase().includes(searchInput.toLowerCase())) &&
+        (searchInput && !toilet.description.toLowerCase().includes(searchInput.toLowerCase()))) {
       return false;
     }
     if (selectedOptions.unisex && toilet.gender !== 'unisex') return false;

@@ -18,8 +18,8 @@ function ToiletCard({ toilet }) {
     return (
       <div className="bg-white p-4 rounded-lg shadow-md flex items-center space-x-4 border-green-500 border-2">
         <div className="flex flex-col flex-grow">
-          <h3 className="text-lg text-gray-600 font-bold">{toilet.name}</h3>
-          <p className="text-gray-600">{toilet.location}</p>
+          <h3 className="text-lg text-gray-600 font-bold">{toilet.location}</h3>
+          <p className="text-gray-600">{toilet.description}</p>
           <div className="flex items-center space-x-2 mt-2"> 
             <span className="text-yellow-400">
               {'★'.repeat(toilet.rating)}
