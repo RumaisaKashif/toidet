@@ -33,10 +33,10 @@ function FilterButton() {
         <div className="relative flex-none items-center space-x-2">
         <button 
             ref={buttonRef}
-            className="p-0 border border-green-500 rounded-full"
+            className="p-0 border border-green-500 flex rounded-full"
             onClick={toggleDropDown}
         >
-        <img src={filter} alt="Filter" className="w-9 h-9 object-cover rounded-full" />
+        <img src={filter} alt="Filter" className="w-10 h-10 object-cover rounded-full" />
           </button>
           {visibility && (
             <div
@@ -45,6 +45,20 @@ function FilterButton() {
           >
             <ul className="py-2">
               {/* Option 1 */}
+              <li
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center"
+                onClick={() => toggleCheckBox('bidet')}
+              >
+                <input
+                  type="checkbox"
+                  checked={selectedOptions.bidet}
+                  onChange={() => toggleCheckBox('bidet')}
+                  className="mr-2"
+                />
+                Bidet
+              </li>
+
+              {/* Option 2 */}
               <li
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center"
                 onClick={() => toggleCheckBox('male')}
@@ -58,7 +72,7 @@ function FilterButton() {
                 Male
               </li>
   
-              {/* Option 2 */}
+              {/* Option 3 */}
               <li
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center"
                 onClick={() => toggleCheckBox('female')}
@@ -72,7 +86,7 @@ function FilterButton() {
                 Female
               </li>
   
-              {/* Option 3 */}
+              {/* Option 4 */}
               <li
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center"
                 onClick={() => toggleCheckBox('disabled')}
@@ -84,20 +98,6 @@ function FilterButton() {
                   className="mr-2"
                 />
                 Disabled
-              </li>
-  
-              {/* Option 4 */}
-              <li
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center"
-                onClick={() => toggleCheckBox('bidet')}
-              >
-                <input
-                  type="checkbox"
-                  checked={selectedOptions.bidet}
-                  onChange={() => toggleCheckBox('bidet')}
-                  className="mr-2"
-                />
-                Bidet
               </li>
             </ul>
           </div>

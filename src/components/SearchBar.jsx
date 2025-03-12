@@ -17,7 +17,7 @@ function SearchBar() {
   };
 
   return (
-    <div className="bg-white p-4 flex items-center space-x-4">
+    <div className="bg-white p-0 ml-4 mr-4 flex items-center space-x-4">
       <div className="flex flex-auto items-center bg-gray-100 p-2 rounded-full space-x-2">
         <input
           type="text"

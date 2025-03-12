@@ -13,6 +13,7 @@ function ToiletList() {
     async function getToilets() {
       try {
         const data = await fetchToilets();
+        
         setToilets(data);
       } catch (error) {
         console.error("Error fetching toilets:", error);
@@ -48,7 +49,7 @@ function ToiletList() {
         </div>
       ) : (
         filteredToilets.map((toilet) => (
-          <ToiletCard key={toilet.id} toilet={toilet} />
+          <ToiletCard id={toilet.id} toilet={toilet} />
         ))
       )}
     </div>

@@ -1,23 +1,16 @@
-import { SearchProvider } from './SearchContext'; // Global searching process
-import { OptionsProvider } from './OptionsContext';
-import Header from './components/Header';
-import SearchBar from './components/SearchBar';
-import ToiletList from './components/ToiletList';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ToiletDetailed from "./Pages/ToiletDetailed";
+import MainPage from "./Pages/MainPage";
 
 function App() {
-  return (
-    <SearchProvider>
-      <OptionsProvider>
-        <div className="bg-white p-0 w-screen min-h-screen flex-col">
-          <Header />
-          <SearchBar />
-          <ToiletList />
-          <Footer className="mt-auto"/>
-        </div>
-      </OptionsProvider>
-    </SearchProvider>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<MainPage />} /> 
+                <Route path="/:id" element={<ToiletDetailed />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;
